@@ -1,0 +1,78 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import register from '../../Assets/signup.png';
+import logo from '../../Assets/logo.svg';
+import Navbar from '../molecules/Navbar';
+import Footer from '../molecules/Footer';
+import LoginPage from './LoginPage';
+import google from '../../Assets/google.svg';
+
+
+function RegisterPage() {
+  return (
+    <>
+    <div className= 'p-28 items-center'>
+      <Navbar />
+      <div className='flex justify-center mx-auto md:flex-row md:max-w-full'>
+      <div class="hidden md:block">
+      <img src={register} alt="logo" className=" w-96" />
+      </div>
+      <div className="border-slate-200 rounded-xl mx-auto shadow-md p-12 w-96">
+        <form className="text-sm max-w-[460px] h-full sm:max-w-full">
+            <img src={logo} alt="logo" className="w-32 mx-auto mb-5" />
+            <label for="email">
+                <span className="block font-semibold mb-1 after:content-['*'] after:ml-0.5 after:text-pink-500">Email</span>
+                <input placeholder="nama@mail.com" id="email" 
+                  className='w-full block border rounded border-orange-400 bg-gray-100 p-2 focus:outline-none focus:ring-orange-500 focus:border-orange-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer' 
+                  type="email" 
+                />
+                <p className="mb-0 text-sm text-pink-700 invisible peer-invalid:visible">Email tidak valid</p>
+            </label>
+            <label for="text">
+                <span className="block font-semibold mb-1 after:content-['*'] after:ml-0.5 after:text-pink-500">Nama</span>
+                <input placeholder="Nama Anda" id="nama" 
+                  className='mb-4 w-full block border rounded border-orange-400 bg-gray-100 p-2 focus:outline-none focus:ring-orange-500 focus:border-orange-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer' 
+                  type="text" 
+                />
+            </label>
+            <label for="text">
+                <span className="block font-semibold mb-1 after:content-['*'] after:ml-0.5 after:text-pink-500">Username</span>
+                <input placeholder="Username Anda" id="username" 
+                  className='mb-4 w-full block border rounded border-orange-400 bg-gray-100 p-2 focus:outline-none focus:ring-orange-500 focus:border-orange-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer' 
+                  type="text" 
+                />
+            </label>
+            <label for="password">
+              <span className="block font-semibold mb-1 after:content-['*'] after:ml-0.5 after:text-pink-500">Password</span>
+              <input placeholder="********" id="password" 
+                  className='w-full mb-4 block border rounded border-orange-400 bg-gray-100 p-2 mb-2 focus:outline-none focus:ring-orange-500 focus:border-orange-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700' 
+                  type="password" 
+              />
+            </label>
+            <label for="password">
+              <span className="block font-semibold mb-1 after:content-['*'] after:ml-0.5 after:text-pink-500">Konfirmasi Password</span>
+              <input placeholder="********" id="konfirmasi password" 
+                  className='w-full block border rounded border-orange-400 bg-gray-100 p-2 mb-2 focus:outline-none focus:ring-orange-500 focus:border-orange-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700' 
+                  type="password" 
+              />
+            </label>
+                
+            <button className='w-full py-3 mt-4 bg-orange-500 hover:bg-orange-700 relative text-white'>Daftar</button>           
+            <p className='text-center mt-4'>Sudah Punya Account ? <Link to="/" className="font-bold">Login</Link></p>
+
+            <button class="py-3 px-3 mt-8 mb-4 w-full justify-center rounded-2xl bg-blue-50 hover:bg-blue-100 focus:bg-blue-100 active:bg-blue-200 flex">
+              <div class="flex gap-4 justify-center max-w-sm">
+                <img src={google} class="w-5" alt="google" />
+                <span class="block w-max font-medium tracking-wide text-sm text-blue-700">with  Google</span>
+              </div>
+            </button>
+        </form>
+        </div>
+    </div>
+    </div>
+    <Footer />
+    </>
+  )
+}
+
+export default RegisterPage
