@@ -89,6 +89,14 @@ function AboutPage() {
           </div>
         </div>
 
+        <div>
+          <div className='flex flex-col items-center justify-center mt-10'>
+            <p className='text-2xl font-bold border-b-4 border-orange-500'>
+              Team CodeIn
+            </p>
+          </div>
+        </div>
+
         
         <div className='flex justify-center p-10'>
           <div className='grid grid-cols-1 gap-6 md:grid-cols-3 sm:grid-cols-2 '>
@@ -115,4 +123,4 @@ function AboutPage() {
   )
 }
 
-export default AboutPage
+export default AboutPage;
